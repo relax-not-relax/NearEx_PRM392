@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/gradient_background_2">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="290dp"
+        android:layout_height="206dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
+        android:drawableStart="@drawable/arrow_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="483dp"
+        android:background="@drawable/back"
+        android:orientation="vertical"
+        app:flow_verticalAlign="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textViewH1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome To NearEx"
+            android:layout_marginTop="55dp"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:fontFamily="@font/outfit_bold"
+            android:textColor="#161525"/>
+
+        <TextView
+            android:id="@+id/textViewH3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nhập số điện thoại để tiếp tục"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:fontFamily="@font/inter_medium"
+            android:textColor="#5A5A5A"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"/>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:weightSum="10">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="3"
+                android:weightSum="10"
+                android:background="@drawable/border_side">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:src="@drawable/vietnam"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:text="+84"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/outfit_medium"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:background="@drawable/border_side_2">
+                <EditText
+                    android:id="@+id/editTextPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/white"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hoặc đăng nhập bằng"
+            android:gravity="center"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/inter_regular"
+            android:textSize="13dp"
+            android:textColor="#B6B6B6"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonGoogle"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/google"/>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

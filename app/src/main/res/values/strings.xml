@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">NearEx_PRM392</string>
+
+    //Headings
+    <string name="heading_one">Online 24/7</string>
+    <string name="heading_two">Giao Hàng Nhanh</string>
+    <string name="heading_three">Lựa Chọn Dễ Dàng</string>
+
+    //Description
+    <string name="desc_one">Dễ dàng đặt hàng và thanh toán online. Ngoài ra, bạn có thể chọn thanh toán khi nhận hàng tùy vào lựa chọn của bạn.</string>
+    <string name="desc_two">Bạn sẽ nhanh chóng nhận được những sản phẩm gần hết hạn mà không cần quá lo lắng</string>
+    <string name="desc_three">Dễ dàng tìm kiếm các sản phẩm tại các vị trí gần bạn và khu xả đồ gần hết hạn</string>
 </resources>
