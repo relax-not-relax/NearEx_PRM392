@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Verify">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
+        android:drawableStart="@drawable/arrow_left_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="76dp"
+        android:text="Xác minh"
+        android:textSize="24dp"
+        android:fontFamily="@font/inter_bold"
+        android:textColor="#181823"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="Nhập mã được gửi đến số điện thoại"
+        android:textColor="#5A5A5A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textViewPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="*******000"
+        android:textColor="#5A5A5A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="562dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp">
+
+            <EditText
+                android:id="@+id/editTextNumberOne"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:inputType="number"
+                android:background="@drawable/number_field"/>
+            <EditText
+                android:id="@+id/editTextNumberTwo"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:inputType="number"
+                android:background="@drawable/number_field"/>
+            <EditText
+                android:id="@+id/editTextNumberThree"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:inputType="number"
+                android:background="@drawable/number_field"/>
+            <EditText
+                android:id="@+id/editTextNumberFour"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:inputType="number"
+                android:background="@drawable/number_field"/>
+            <EditText
+                android:id="@+id/editTextNumberFive"
+                android:layout_width="35dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:inputType="number"
+                android:background="@drawable/number_field"/>
+            <EditText
+                android:id="@+id/editTextNumberSix"
+                android:layout_width="34dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:background="@drawable/number_field"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonNext"
+            android:layout_width="350dp"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_login"
+            android:text="Tiếp Tục"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:fontFamily="@font/inter_semibold"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:text="Không nhận được mã?"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="#5A5A5A"
+                android:textSize="12dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text=" Gửi lại"
+                android:fontFamily="@font/inter_semibold"
+                android:textColor="#537FE7"
+                android:textSize="12dp"/>
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="#00FFFFFF"
+            android:layout_marginTop="10dp"
+            android:text="Huỷ bỏ"
+            android:textAllCaps="false"
+            android:fontFamily="@font/inter_bold"
+            android:textColor="#9C9A9A"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

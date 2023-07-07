@@ -6,4 +6,89 @@
     android:layout_height="match_parent"
     tools:context=".MainScreen">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="23dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/location"
+                android:layout_marginTop="4dp"/>
+            <TextView
+                android:id="@+id/textViewLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="173 Lê Văn Việt, Thủ Đức..."
+                android:textSize="19dp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/inter_bold"
+                android:drawableEnd="@drawable/angle_right"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonNoti"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/bell"
+                android:layout_marginLeft="22dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonMenu"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/menu"
+                android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Tìm kiếm"
+            android:textSize="17dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/search_field"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableEnd="@drawable/search"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="120dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerImageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,18 @@
         android:theme="@style/Theme.NearEx_PRM392"
         tools:targetApi="31">
         <activity
+            android:name=".LoginOldCustomer"
+            android:exported="false" />
+        <activity
+            android:name=".SetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".DoneVerify"
+            android:exported="false" />
+        <activity
+            android:name=".Verify"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
