@@ -323,16 +323,34 @@
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="15dp"
-                android:fontFamily="@font/inter_bold"
-                android:text="Cửa hàng gần bạn"
-                android:textSize="18dp"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp"/>
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Cửa hàng gần bạn"
+                    android:textSize="18dp"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnStoreDt"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/angle_right"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="90dp"/>
+
+            </LinearLayout>
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -354,16 +372,120 @@
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="15dp"
-                android:fontFamily="@font/inter_bold"
-                android:text="Cửa hàng gần bạn"
-                android:textSize="18dp"
-                android:paddingLeft="40dp"
-                android:paddingRight="40dp"/>
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginTop="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="8dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/flashsale"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:text="00"
+                            android:id="@+id/hour"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/clock_bg"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:textColor="#FF4500"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:textSize="25dp"
+                            android:gravity="center_vertical"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:text="00"
+                            android:id="@+id/min"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/clock_bg"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:textColor="#FF4500"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:textSize="25dp"
+                            android:gravity="center_vertical"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:text="00"
+                            android:id="@+id/sec"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/clock_bg"
+                            />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="17dp"
+                    android:paddingBottom="70dp"
+                    android:paddingLeft="35dp"
+                    android:background="@color/white"
+                    >
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/listSale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
 
 
 

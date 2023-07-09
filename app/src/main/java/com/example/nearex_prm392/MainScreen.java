@@ -9,20 +9,31 @@ import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class MainScreen extends AppCompatActivity {
+
+    private TextView txtHour, txtMin, txtSec;
 
     private ViewPager2 viewPager2;
     private List<SliderMktItem> sliderMktItems;
     private Handler sliderHandler = new Handler();
 
-    private RecyclerView rcvStore;
+    private RecyclerView rcvStore, rcvSale;
     private StoreContainerAdapter storeAdapter;
+    private ProductContainerAdapter productAdapter;
+
+    private int duration = 120;
+    private boolean timerRunning = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +70,52 @@ public class MainScreen extends AppCompatActivity {
         storeAdapter.setData(getStoreList());
         rcvStore.setAdapter(storeAdapter);
 
+        txtHour = (TextView) findViewById(R.id.hour);
+        txtMin = (TextView) findViewById(R.id.min);
+        txtSec = (TextView) findViewById(R.id.sec);
+
+        if (!timerRunning) {
+            timerRunning = true;
+            new CountDownTimer(duration * 1000, 1000) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            String timer = String.format(Locale.getDefault(), "%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(millisUntilFinished),
+                                    TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)-
+                                            TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
+                                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished)-
+                                            TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)));
+
+                            final String[] hourMinSec = timer.split(":");
+
+                            txtHour.setText(hourMinSec[0]);
+                            txtMin.setText(hourMinSec[1]);
+                            txtSec.setText(hourMinSec[2]);
+                        }
+                    });
+                }
+
+                @Override
+                public void onFinish() {
+                    duration = 120;
+                    timerRunning = false;
+                }
+            }.start();
+        } else {
+            Toast.makeText(MainScreen.this, "Timer is already running", Toast.LENGTH_SHORT).show();
+        }
+
+        rcvSale = (RecyclerView) findViewById(R.id.listSale);
+        productAdapter = new ProductContainerAdapter(this);
+
+        LinearLayoutManager linearLayoutProductManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
+        rcvSale.setLayoutManager(linearLayoutProductManager);
+
+        productAdapter.setData(getProductList());
+        rcvSale.setAdapter(productAdapter);
+
     }
 
     private List<StoreContainer> getStoreList() {
@@ -73,6 +130,21 @@ public class MainScreen extends AppCompatActivity {
 
         list.add(new StoreContainer(storeItemList));
 
+        return list;
+    }
+
+    private List<ProductContainer> getProductList() {
+        List<ProductContainer> list = new ArrayList<>();
+        List<ProductItem> productItemList = new ArrayList<>();
+
+        productItemList.add(new ProductItem(R.drawable.mihaohao, "Mì gói Hảo Hảo", "330000", "233000"));
+        productItemList.add(new ProductItem(R.drawable.mihaohao, "Mì gói Hảo Hảo", "330000", "233000"));
+        productItemList.add(new ProductItem(R.drawable.mihaohao, "Mì gói Hảo Hảo", "330000", "233000"));
+        productItemList.add(new ProductItem(R.drawable.mihaohao, "Mì gói Hảo Hảo", "330000", "233000"));
+        productItemList.add(new ProductItem(R.drawable.mihaohao, "Mì gói Hảo Hảo", "330000", "233000"));
+        productItemList.add(new ProductItem(R.drawable.mihaohao, "Mì gói Hảo Hảo", "330000", "233000"));
+
+        list.add(new ProductContainer(productItemList));
         return list;
     }
 
