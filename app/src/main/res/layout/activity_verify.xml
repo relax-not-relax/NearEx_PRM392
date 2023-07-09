@@ -67,7 +67,7 @@
             android:layout_height="40dp"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="20dp">
 
             <EditText
                 android:id="@+id/editTextNumberOne"
@@ -164,6 +164,7 @@
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonCancel"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_gravity="center"

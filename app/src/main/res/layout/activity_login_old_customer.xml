@@ -88,6 +88,7 @@
             android:fontFamily="@font/inter_semibold"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonForgot"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_gravity="center"

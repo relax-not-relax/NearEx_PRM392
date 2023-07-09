@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="10dp">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+        
+        <ImageView
+            android:id="@+id/imageStore"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/store1"/>
+
+        <TextView
+            android:id="@+id/textStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Circle K Lê Văn Việt"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:fontFamily="@font/inter_semibold"
+            android:layout_marginTop="8dp"/>
+        
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
