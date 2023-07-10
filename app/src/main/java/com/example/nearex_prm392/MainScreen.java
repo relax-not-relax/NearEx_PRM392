@@ -144,6 +144,8 @@ public class MainScreen extends AppCompatActivity {
         productItemList.add(new ProductItem(R.drawable.mihaohao, "Mì gói Hảo Hảo", "330000", "233000"));
         productItemList.add(new ProductItem(R.drawable.mihaohao, "Mì gói Hảo Hảo", "330000", "233000"));
 
+
+
         list.add(new ProductContainer(productItemList));
         return list;
     }

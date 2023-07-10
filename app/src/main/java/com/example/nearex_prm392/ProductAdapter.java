@@ -1,6 +1,9 @@
 package com.example.nearex_prm392;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Paint;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +20,23 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
     private List<ProductItem> productItems;
 
+    public interface OnButtonClickListener {
+        void onButtonClick(int position);
+    }
+
+    private OnButtonClickListener listener;
+
+    public void setOnButtonClickListener(OnButtonClickListener listener) {
+        this.listener = listener;
+    }
+
+
     public void setData(List<ProductItem> list) {
         this.productItems = list;
         notifyDataSetChanged();
     }
+
+
 
     @NonNull
     @Override
@@ -30,7 +46,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         ProductItem product = productItems.get(position);
         if (product == null) {
             return;
@@ -40,6 +56,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         holder.txtProduct.setText(product.getTitle());
         holder.txtOldPrice.setText(product.getOldPrice());
         holder.txtNewPrice.setText(product.getNewPrice());
+
+        holder.btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onButtonClick(position);
+                }
+            }
+        });
     }
 
     @Override
@@ -67,7 +92,11 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             txtNewPrice = itemView.findViewById(R.id.newPrice);
             txtOldPrice.setPaintFlags(txtOldPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             btnAdd = itemView.findViewById(R.id.buttonAdd);
+
         }
+
+
+
     }
 
 }

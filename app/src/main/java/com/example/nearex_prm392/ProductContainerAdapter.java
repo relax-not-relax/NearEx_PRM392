@@ -1,6 +1,7 @@
 package com.example.nearex_prm392;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +45,13 @@ public class ProductContainerAdapter extends RecyclerView.Adapter<ProductContain
 
         ProductAdapter productAdapter = new ProductAdapter();
         productAdapter.setData(productContainer.getProductItems());
+        productAdapter.setOnButtonClickListener(new ProductAdapter.OnButtonClickListener() {
+            @Override
+            public void onButtonClick(int position) {
+                Intent intent = new Intent(context, ProductDetail.class);
+                context.startActivity(intent);
+            }
+        });
         holder.rcvProduct.setAdapter(productAdapter);
     }
 
