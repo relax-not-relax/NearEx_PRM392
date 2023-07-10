@@ -3,6 +3,7 @@ package com.example.nearex_prm392;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -43,6 +44,13 @@ public class ProductDetail extends AppCompatActivity {
                     numberOfOrder = numberOfOrder - 1;
                 }
                 txtAmount.setText(String.valueOf(numberOfOrder));
+            }
+        });
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProductDetail.this, CheckOut.class));
             }
         });
     }

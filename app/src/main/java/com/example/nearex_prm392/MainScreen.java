@@ -8,10 +8,12 @@ import androidx.viewpager2.widget.CompositePageTransformer;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +25,8 @@ import java.util.concurrent.TimeUnit;
 public class MainScreen extends AppCompatActivity {
 
     private TextView txtHour, txtMin, txtSec;
+
+    private ImageView imgNoodles;
 
     private ViewPager2 viewPager2;
     private List<SliderMktItem> sliderMktItems;
@@ -115,6 +119,14 @@ public class MainScreen extends AppCompatActivity {
 
         productAdapter.setData(getProductList());
         rcvSale.setAdapter(productAdapter);
+
+        imgNoodles = (ImageView) findViewById(R.id.imageViewNoodles);
+        imgNoodles.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainScreen.this, Shopping.class));
+            }
+        });
 
     }
 
