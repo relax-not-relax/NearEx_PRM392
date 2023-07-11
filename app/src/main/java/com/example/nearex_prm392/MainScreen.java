@@ -2,6 +2,7 @@ package com.example.nearex_prm392;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.CompositePageTransformer;
@@ -27,6 +28,8 @@ public class MainScreen extends AppCompatActivity {
     private TextView txtHour, txtMin, txtSec;
 
     private ImageView imgNoodles;
+
+    private AppCompatButton btnNoti;
 
     private ViewPager2 viewPager2;
     private List<SliderMktItem> sliderMktItems;
@@ -125,6 +128,15 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainScreen.this, Shopping.class));
+            }
+        });
+
+
+        btnNoti = findViewById(R.id.buttonNoti);
+        btnNoti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainScreen.this, Notification.class));
             }
         });
 

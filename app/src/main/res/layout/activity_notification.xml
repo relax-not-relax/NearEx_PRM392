@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Shopping"
+    tools:context=".Notification"
     android:background="#F4F4F4">
 
     <androidx.cardview.widget.CardView
@@ -46,69 +46,33 @@
                     android:layout_marginLeft="3dp"
                     android:fontFamily="@font/inter_bold"
                     android:gravity="center"
-                    android:text="Mì"
+                    android:text="Thông báo"
                     android:textSize="18dp"
                     android:layout_marginStart="20dp"
                     />
 
             </LinearLayout>
 
-            <LinearLayout
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="10"
-                android:layout_marginTop="15dp">
-
-                <EditText
-                    android:id="@+id/editTextSearch"
-                    android:layout_width="0dp"
-                    android:layout_height="30dp"
-                    android:layout_weight="9"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:hint="Tìm kiếm"
-                    android:textSize="15dp"
-                    android:background="@drawable/search_field"
-                    android:drawableEnd="@drawable/search"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:layout_marginEnd="10dp"/>
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/filter"
-                    android:layout_gravity="center"
-                    />
-
-            </LinearLayout>
+                app:tabSelectedTextColor="#537FE7"
+                android:layout_gravity="center"/>
 
         </LinearLayout>
 
-
-
     </androidx.cardview.widget.CardView>
 
-    <ScrollView
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="622dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView5"
-        app:layout_constraintVertical_bias="0.016"
-        android:background="#fff" >
+        app:layout_constraintTop_toBottomOf="@+id/cardView5" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcvNotiItem"
-            android:layout_width="match_parent"
-            android:layout_height="620dp"
-            />
-
-    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

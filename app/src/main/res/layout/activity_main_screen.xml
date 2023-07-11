@@ -44,13 +44,9 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:background="@drawable/bell"
-                android:layout_marginLeft="22dp"/>
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/buttonMenu"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/menu"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="50dp"
+                />
+
         </LinearLayout>
 
         <EditText

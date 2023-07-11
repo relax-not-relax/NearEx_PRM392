@@ -12,7 +12,7 @@ import org.w3c.dom.Text;
 
 public class ProductDetail extends AppCompatActivity {
 
-    AppCompatButton btnMinus, btnPlus, btnAdd;
+    AppCompatButton btnMinus, btnPlus, btnAdd, btnBack;
     TextView txtAmount;
 
     private int numberOfOrder = 1;
@@ -26,6 +26,7 @@ public class ProductDetail extends AppCompatActivity {
         btnMinus = (AppCompatButton) findViewById(R.id.btnMinus);
         btnPlus = (AppCompatButton) findViewById(R.id.btnPlus);
         btnAdd = (AppCompatButton) findViewById(R.id.btnAdd);
+        btnBack = (AppCompatButton) findViewById(R.id.buttonBack);
 
         txtAmount.setText(String.valueOf(numberOfOrder));
 
@@ -53,5 +54,13 @@ public class ProductDetail extends AppCompatActivity {
                 startActivity(new Intent(ProductDetail.this, CheckOut.class));
             }
         });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 }

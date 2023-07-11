@@ -20,7 +20,7 @@ public class DoneCheckOut extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(DoneCheckOut.this, MainScreen.class));
             }
         });
     }

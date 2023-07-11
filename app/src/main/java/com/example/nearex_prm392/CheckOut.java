@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class CheckOut extends AppCompatActivity {
 
-    AppCompatButton btnCheckOut;
+    AppCompatButton btnCheckOut, btnBack;
     TextView txtPaymentMethod;
 
     @Override
@@ -19,12 +19,20 @@ public class CheckOut extends AppCompatActivity {
         setContentView(R.layout.activity_check_out);
 
         btnCheckOut = (AppCompatButton) findViewById(R.id.btnCheckOut);
+        btnBack = (AppCompatButton) findViewById(R.id.buttonBack);
         txtPaymentMethod = (TextView) findViewById(R.id.txtPaymentMethod);
 
         btnCheckOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(CheckOut.this, DoneCheckOut.class));
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 
