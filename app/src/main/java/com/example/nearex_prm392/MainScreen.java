@@ -15,8 +15,13 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.nearex_prm392.Adapter.ProductContainerAdapter;
+import com.example.nearex_prm392.Adapter.SliderMktAdapter;
+import com.example.nearex_prm392.Adapter.StoreContainerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +34,9 @@ public class MainScreen extends AppCompatActivity {
 
     private ImageView imgNoodles;
 
-    private AppCompatButton btnNoti;
+    private AppCompatButton btnNoti, btnStoreList;
+
+    LinearLayout btnHome, btnActivity;
 
     private ViewPager2 viewPager2;
     private List<SliderMktItem> sliderMktItems;
@@ -137,6 +144,30 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainScreen.this, Notification.class));
+            }
+        });
+
+        btnHome = findViewById(R.id.buttonHome);
+        btnActivity = findViewById(R.id.buttonActivity);
+        btnStoreList = findViewById(R.id.btnStoreList);
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainScreen.this, MainScreen.class));
+            }
+        });
+
+        btnActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainScreen.this, Notification.class));
+            }
+        });
+
+        btnStoreList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainScreen.this, NearStore.class));
             }
         });
 

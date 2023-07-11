@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.nearex_prm392.Adapter.ShopAdapter;
+
 import java.util.ArrayList;
 
 public class Shopping extends AppCompatActivity implements ShopAdapter.OnItemClickListener {

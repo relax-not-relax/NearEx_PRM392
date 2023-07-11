@@ -1,9 +1,7 @@
-package com.example.nearex_prm392;
+package com.example.nearex_prm392.Adapter;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.graphics.Paint;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.nearex_prm392.ProductItem;
+import com.example.nearex_prm392.R;
 
 import java.util.List;
 

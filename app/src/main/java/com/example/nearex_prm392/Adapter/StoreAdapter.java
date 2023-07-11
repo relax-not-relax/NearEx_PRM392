@@ -1,4 +1,4 @@
-package com.example.nearex_prm392;
+package com.example.nearex_prm392.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.nearex_prm392.R;
+import com.example.nearex_prm392.StoreItem;
 
 import java.util.List;
 

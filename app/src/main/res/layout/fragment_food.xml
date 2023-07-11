@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.ConfirmedOrder">
+    tools:context=".Fragment.FoodFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
@@ -12,7 +12,7 @@
         android:background="#fff" >
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcvNotiItem"
+            android:id="@+id/rcvProduct"
             android:layout_width="match_parent"
             android:layout_height="620dp"
             />

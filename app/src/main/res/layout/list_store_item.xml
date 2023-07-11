@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="10"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageStore"
+            android:layout_width="0dp"
+            android:layout_height="109dp"
+            android:layout_weight="3"
+            android:src="@drawable/store1"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/verify"/>
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CircleK Lê Văn Việt"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.5km"
+                android:textSize="11dp"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="#8F8F8F"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="7dp"/>
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="134 Lê Văn Việt, Phường 3, Tp.Thủ Đức"
+                android:textSize="13dp"
+                android:fontFamily="@font/inter_semibold"
+                android:textColor="#8F8F8F"
+                android:drawableStart="@drawable/location_point_2"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="7dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+</LinearLayout>

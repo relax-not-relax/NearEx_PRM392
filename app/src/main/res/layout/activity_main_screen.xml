@@ -336,7 +336,7 @@
                     android:paddingRight="40dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnStoreDt"
+                    android:id="@+id/btnStoreList"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@drawable/angle_right"
@@ -496,7 +496,8 @@
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        >
 
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/appBar"
@@ -504,16 +505,16 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:backgroundTint="#f6f6f6"
+            app:contentInsetStart="0dp"
             app:fabCradleMargin="8dp"
             app:fabCradleRoundedCornerRadius="50dp"
-            app:fabCradleVerticalOffset="6dp"
-            >
+            app:fabCradleVerticalOffset="6dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:gravity="center"
+
                 >
 
                 <LinearLayout

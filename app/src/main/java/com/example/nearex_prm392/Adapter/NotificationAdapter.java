@@ -1,10 +1,13 @@
-package com.example.nearex_prm392;
+package com.example.nearex_prm392.Adapter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+
+import com.example.nearex_prm392.Fragment.ConfirmedOrder;
+import com.example.nearex_prm392.Fragment.PaidOrder;
 
 public class NotificationAdapter extends FragmentStatePagerAdapter {
 

@@ -1,7 +1,6 @@
-package com.example.nearex_prm392;
+package com.example.nearex_prm392.Adapter;
 
 import android.content.Context;
-import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,14 +10,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.nearex_prm392.NearStoreItem;
+import com.example.nearex_prm392.R;
+
 import java.util.ArrayList;
 
-public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
+public class NearStoreAdapter extends RecyclerView.Adapter<NearStoreAdapter.ViewHolder> {
 
-    private ArrayList<ShopItem> shopItems;
+    private ArrayList<NearStoreItem> nearStoreItems;
 
-    public ShopAdapter(ArrayList<ShopItem> shopItems) {
-        this.shopItems = shopItems;
+    public NearStoreAdapter(ArrayList<NearStoreItem> nearStoreItems) {
+        this.nearStoreItems = nearStoreItems;
     }
 
     public interface OnItemClickListener {
@@ -32,50 +34,49 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder> {
         this.listener = listener;
     }
 
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater layoutInflater = LayoutInflater.from(context);
 
-        View view = layoutInflater.inflate(R.layout.shop_item, parent, false);
+        View view = layoutInflater.inflate(R.layout.list_store_item, parent, false);
 
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ShopItem shopItem = shopItems.get(position);
 
-        holder.imgItem.setImageResource(shopItem.getImage());
-        holder.txtItem.setText(shopItem.getName());
-        holder.txtOldPrice.setText(shopItem.getOldPrice());
-        holder.txtNewPrice.setText(shopItem.getNewPrice());
-        holder.txtExp.setText(shopItem.getExpDate());
-        holder.txtStore.setText(shopItem.getStoreName());
+        NearStoreItem nearStoreItem = nearStoreItems.get(position);
+
+        holder.imgStore.setImageResource(nearStoreItem.getImage());
+        holder.txtName.setText(nearStoreItem.getName());
+        holder.txtDistance.setText(nearStoreItem.getDistance());
+        holder.txtLocation.setText(nearStoreItem.getLocation());
+
     }
 
     @Override
     public int getItemCount() {
-        return shopItems.size();
+        return nearStoreItems.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView imgItem;
-        TextView txtItem, txtOldPrice, txtNewPrice, txtStore, txtExp;
+        ImageView imgStore;
+        TextView txtName, txtDistance, txtLocation;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgItem = itemView.findViewById(R.id.imageItem);
-            txtItem = itemView.findViewById(R.id.txtItem);
-            txtOldPrice = itemView.findViewById(R.id.oldPrice);
-            txtOldPrice.setPaintFlags(txtOldPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            txtNewPrice = itemView.findViewById(R.id.newPrice);
-            txtExp = itemView.findViewById(R.id.expDate);
-            txtStore = itemView.findViewById(R.id.txtStoreItem);
+
+            imgStore = itemView.findViewById(R.id.imageStore);
+            txtName = itemView.findViewById(R.id.txtName);
+            txtDistance = itemView.findViewById(R.id.txtDistance);
+            txtLocation = itemView.findViewById(R.id.txtLocation);
+
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

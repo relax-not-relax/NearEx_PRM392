@@ -1,4 +1,4 @@
-package com.example.nearex_prm392;
+package com.example.nearex_prm392.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.nearex_prm392.R;
+import com.example.nearex_prm392.SliderMktItem;
 import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.List;

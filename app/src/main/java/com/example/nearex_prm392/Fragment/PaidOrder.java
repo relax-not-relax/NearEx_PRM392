@@ -1,4 +1,4 @@
-package com.example.nearex_prm392;
+package com.example.nearex_prm392.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.nearex_prm392.Adapter.NotiItemAdapter;
+import com.example.nearex_prm392.NotificationItem;
+import com.example.nearex_prm392.ProductDetail;
+import com.example.nearex_prm392.R;
 
 import java.util.ArrayList;
 
