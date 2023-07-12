@@ -44,7 +44,7 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:background="@drawable/bell"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="60dp"
                 />
 
         </LinearLayout>

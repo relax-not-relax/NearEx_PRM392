@@ -1,21 +1,29 @@
 package com.example.nearex_prm392.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.nearex_prm392.Adapter.ShopAdapter;
+import com.example.nearex_prm392.ProductDetail;
 import com.example.nearex_prm392.R;
+import com.example.nearex_prm392.ShopItem;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link VegeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class VegeFragment extends Fragment {
+public class VegeFragment extends Fragment implements ShopAdapter.OnItemClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -57,10 +65,45 @@ public class VegeFragment extends Fragment {
         }
     }
 
+    private RecyclerView rcvProduct;
+    private ShopAdapter adapter;
+    private ArrayList<ShopItem> shopItems;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_vege, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_vege, container, false);
+
+        rcvProduct = rootView.findViewById(R.id.rcvProduct);
+        getData();
+
+        return rootView;
+    }
+
+    private void getData() {
+        shopItems = new ArrayList<>();
+
+        shopItems.add(new ShopItem(R.drawable.mihaohao, "Mì tôm chua cay Hảo Hảo", "330000", "230000", "10/8/2023", "CircleK"));
+        shopItems.add(new ShopItem(R.drawable.mihaohao, "Mì tôm chua cay Hảo Hảo", "330000", "230000", "10/8/2023", "CircleK"));
+        shopItems.add(new ShopItem(R.drawable.mihaohao, "Mì tôm chua cay Hảo Hảo", "330000", "230000", "10/8/2023", "CircleK"));
+        shopItems.add(new ShopItem(R.drawable.mihaohao, "Mì tôm chua cay Hảo Hảo", "330000", "230000", "10/8/2023", "CircleK"));
+        shopItems.add(new ShopItem(R.drawable.mihaohao, "Mì tôm chua cay Hảo Hảo", "330000", "230000", "10/8/2023", "CircleK"));
+        shopItems.add(new ShopItem(R.drawable.mihaohao, "Mì tôm chua cay Hảo Hảo", "330000", "230000", "10/8/2023", "CircleK"));
+        shopItems.add(new ShopItem(R.drawable.mihaohao, "Mì tôm chua cay Hảo Hảo", "330000", "230000", "10/8/2023", "CircleK"));
+        shopItems.add(new ShopItem(R.drawable.mihaohao, "Mì tôm chua cay Hảo Hảo", "330000", "230000", "10/8/2023", "CircleK"));
+        shopItems.add(new ShopItem(R.drawable.mihaohao, "Mì tôm chua cay Hảo Hảo", "330000", "230000", "10/8/2023", "CircleK"));
+        shopItems.add(new ShopItem(R.drawable.mihaohao, "Mì tôm chua cay Hảo Hảo", "330000", "230000", "10/8/2023", "CircleK"));
+
+        adapter = new ShopAdapter(shopItems);
+        adapter.setOnItemClickListener((ShopAdapter.OnItemClickListener) this);
+        rcvProduct.setAdapter(adapter);
+        rcvProduct.setLayoutManager(new LinearLayoutManager(getActivity()));
+        adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        startActivity(new Intent(getActivity(), ProductDetail.class));
     }
 }

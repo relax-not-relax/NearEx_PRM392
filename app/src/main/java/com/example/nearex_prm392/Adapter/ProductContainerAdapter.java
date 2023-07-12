@@ -52,8 +52,6 @@ public class ProductContainerAdapter extends RecyclerView.Adapter<ProductContain
         productAdapter.setOnButtonClickListener(new ProductAdapter.OnButtonClickListener() {
             @Override
             public void onButtonClick(int position) {
-
-
                 Intent intent = new Intent(context, ProductDetail.class);
                 context.startActivity(intent);
             }

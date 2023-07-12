@@ -30,7 +30,7 @@ import java.util.concurrent.TimeUnit;
 
 public class MainScreen extends AppCompatActivity {
 
-    private TextView txtHour, txtMin, txtSec;
+    private TextView txtHour, txtMin, txtSec,textViewLocation;
 
     private ImageView imgNoodles;
 
@@ -168,6 +168,14 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainScreen.this, NearStore.class));
+            }
+        });
+
+        textViewLocation = findViewById(R.id.textViewLocation);
+        textViewLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainScreen.this, YourLocation.class));
             }
         });
 
