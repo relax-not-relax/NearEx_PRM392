@@ -4,9 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ImageView;
 
 import com.example.nearex_prm392.Adapter.ShopAdapter;
@@ -19,7 +25,7 @@ public class Shopping extends AppCompatActivity implements ShopAdapter.OnItemCli
 
     RecyclerView rcvShop;
 
-    ImageView btnBack;
+    ImageView btnBack, btnFilter;
 
 
     @Override
@@ -30,6 +36,7 @@ public class Shopping extends AppCompatActivity implements ShopAdapter.OnItemCli
         rcvShop = (RecyclerView) findViewById(R.id.rcvNotiItem);
         getData();
 
+        btnFilter = (ImageView) findViewById(R.id.btnFilter);
         btnBack = (ImageView) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +45,25 @@ public class Shopping extends AppCompatActivity implements ShopAdapter.OnItemCli
             }
         });
 
+        btnFilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog();
+            }
+        });
+
+    }
+
+    private void showDialog() {
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.bottom_sheet_layout);
+
+        dialog.show();
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog.getWindow().setGravity(Gravity.BOTTOM);
     }
 
     private void getData() {

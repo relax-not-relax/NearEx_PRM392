@@ -1,6 +1,7 @@
 package com.example.nearex_prm392.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nearex_prm392.R;
 import com.example.nearex_prm392.StoreContainer;
+import com.example.nearex_prm392.StoreDetail;
 
 import java.util.List;
 
@@ -47,6 +49,15 @@ public class StoreContainerAdapter extends RecyclerView.Adapter<StoreContainerAd
 
         StoreAdapter storeAdapter = new StoreAdapter();
         storeAdapter.setData(storeContainer.getStoreItems());
+
+        storeAdapter.setOnButtonClickListener(new StoreAdapter.OnButtonClickListener() {
+            @Override
+            public void onButtonClick(int position) {
+                Intent intent = new Intent(context, StoreDetail.class);
+                context.startActivity(intent);
+            }
+        });
+
         holder.rcvStore.setAdapter(storeAdapter);
     }
 

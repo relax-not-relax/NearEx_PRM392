@@ -1,5 +1,6 @@
 package com.example.nearex_prm392.Adapter;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,16 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.ViewHolder> 
 
     private List<StoreItem> storeItems;
 
+    public interface OnButtonClickListener {
+        void onButtonClick(int position);
+    }
+
+    private OnButtonClickListener listener;
+
+    public void setOnButtonClickListener(OnButtonClickListener listener) {
+        this.listener = listener;
+    }
+
     public void setData(List<StoreItem> list) {
         this.storeItems = list;
         notifyDataSetChanged();
@@ -31,7 +42,7 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.ViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         StoreItem store = storeItems.get(position);
         if (store == null) {
             return;
@@ -39,6 +50,15 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.ViewHolder> 
 
         holder.imgStore.setImageResource(store.getResourceId());
         holder.txtStore.setText(store.getTitle());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (listener != null) {
+                    listener.onButtonClick(position);
+                }
+            }
+        });
     }
 
     @Override

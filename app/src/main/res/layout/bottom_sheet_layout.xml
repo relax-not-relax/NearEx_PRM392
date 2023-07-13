@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Bộ lọc"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="?android:attr/listDivider"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cửa hàng"
+        android:fontFamily="@font/inter_semibold"
+        android:textSize="17dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gần tôi"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="#8F8F8F"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Circle K"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="#8F8F8F"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Family Mart"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="#8F8F8F"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GS25"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="#8F8F8F"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ministop"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="#8F8F8F"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bách hóa xanh"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="#8F8F8F"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Khác"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="#8F8F8F"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp"/>
+
+</LinearLayout>
