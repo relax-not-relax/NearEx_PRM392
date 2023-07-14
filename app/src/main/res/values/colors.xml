@@ -5,4 +5,7 @@
 
     <color name="inactive">#B8D5E5</color>
     <color name="active">#416DD4</color>
+
+    <color name="checked_color">#00BCD4</color>
+    <color name="unchecked_color">#000</color>
 </resources>

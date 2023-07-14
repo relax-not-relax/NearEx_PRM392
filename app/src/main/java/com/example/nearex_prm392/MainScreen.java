@@ -36,7 +36,7 @@ public class MainScreen extends AppCompatActivity {
 
     private AppCompatButton btnNoti, btnStoreList;
 
-    LinearLayout btnHome, btnActivity;
+    LinearLayout btnHome, btnActivity, btnAccount;
 
     private ViewPager2 viewPager2;
     private List<SliderMktItem> sliderMktItems;
@@ -149,6 +149,7 @@ public class MainScreen extends AppCompatActivity {
 
         btnHome = findViewById(R.id.buttonHome);
         btnActivity = findViewById(R.id.buttonActivity);
+        btnAccount = findViewById(R.id.buttonAccount);
         btnStoreList = findViewById(R.id.btnStoreList);
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -161,6 +162,13 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainScreen.this, Notification.class));
+            }
+        });
+
+        btnAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainScreen.this, AccountActivity.class));
             }
         });
 

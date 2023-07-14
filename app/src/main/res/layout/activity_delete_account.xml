@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeleteAccount"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardElevation="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                >
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/arrow_left_2"/>
+
+                <TextView
+                    android:id="@+id/txtCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:gravity="center"
+                    android:text="Xóa tài khoản"
+                    android:textSize="18dp"
+                    android:layout_marginStart="20dp"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/wow3x"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Vậy là lần cuối đi bên nhau?"
+        android:fontFamily="@font/inter_bold"
+        android:textSize="20dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Lưu ý: Tài khoản sau khi xóa sẽ không thể khôi phục lại được"
+        android:layout_gravity="center"
+        android:layout_marginTop="7dp"
+        android:textColor="#FF5722"
+        android:fontFamily="@font/inter_medium"
+        android:textSize="13dp"/>
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Bạn sẽ mất tất cả thông tin và ưu đãi cá nhân bao gồm đơn hàng, địa chỉ đã lưu"
+        android:layout_gravity="center"
+        android:layout_marginTop="7dp"
+        android:textSize="15dp"
+        android:fontFamily="@font/inter_regular"/>
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Sau khi xóa tài khoản, bạn sẽ không thể dùng lại email và số điện thoại của tài khoản này để tạo tài khoản mới luôn nha."
+        android:layout_gravity="center"
+        android:layout_marginTop="7dp"
+        android:textSize="15dp"
+        android:fontFamily="@font/inter_regular"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCancel"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Không xóa nữa đâu"
+        android:layout_gravity="center"
+        android:background="#2196F3"
+        android:textColor="#fff"
+        android:fontFamily="@font/inter_semibold"
+        android:layout_marginTop="90dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDelete"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Xóa tài khoản ngay"
+        android:layout_gravity="center"
+        android:background="@drawable/border_side_3"
+        android:textColor="#353535"
+        android:fontFamily="@font/inter_semibold"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
