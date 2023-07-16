@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:orientation="horizontal"
+    android:weightSum="10"
+    android:background="@drawable/bg_chat_list">
+
+    <ImageView
+        android:id="@+id/imgAvt"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="2"
+        android:src="@drawable/avatar"
+        android:layout_gravity="center"/>
+
+
+    <TextView
+        android:id="@+id/txtNameSupport"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="Nguyễn Bảo Long"
+        android:textSize="15dp"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/inter_semibold"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:text="Khách hàng"
+        android:textSize="13dp"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/inter_medium"
+        android:textColor="#BC352B"
+        android:gravity="center"/>
+
+
+</LinearLayout>
